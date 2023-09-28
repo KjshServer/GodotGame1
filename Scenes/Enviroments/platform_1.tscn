@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyn8s60p25rpp"]
+
+[ext_resource type="Script" path="res://Scripts/Enviroments/platform_1.gd" id="1_5x3oo"]
+[ext_resource type="Texture2D" uid="uid://cgat3qogkb5i0" path="res://Assets/Sprites/Terrain/Terrain (16x16).png" id="1_qmif6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0418"]
+size = Vector2(48, 5)
+
+[node name="platform_1" type="AnimatableBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_5x3oo")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_m0418")
+
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("1_qmif6")
+region_enabled = true
+region_rect = Rect2(272, 0, 48, 8)

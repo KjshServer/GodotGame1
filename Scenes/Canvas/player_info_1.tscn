@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://4pehuwk2hst6"]
+
+[ext_resource type="Script" path="res://Scripts/Canvas/player_info_1.gd" id="1_bcgwq"]
+[ext_resource type="Texture2D" uid="uid://8bdfmonjs2fl" path="res://Assets/Sprites/Other/health_bar_decoration.png" id="2_lnfdw"]
+[ext_resource type="Texture2D" uid="uid://crcg05rxmd0vb" path="res://Assets/Sprites/Other/fruit_basket.png" id="2_rnohw"]
+[ext_resource type="Texture2D" uid="uid://dl11u5qa30aax" path="res://Assets/Sprites/Other/health_bar.png" id="3_adv5b"]
+[ext_resource type="FontFile" uid="uid://dc373y6q8stdg" path="res://Assets/Fonts/font_1.ttf" id="5_m6fqh"]
+[ext_resource type="Texture2D" uid="uid://bnkuakoa5rgi0" path="res://Assets/Sprites/Other/hourglass.png" id="6_nvbty"]
+
+[node name="player_info_1" type="CanvasLayer"]
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
+script = ExtResource("1_bcgwq")
+
+[node name="health_progress" type="TextureProgressBar" parent="."]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 74.0
+offset_bottom = 27.0
+texture_under = ExtResource("2_lnfdw")
+texture_progress = ExtResource("3_adv5b")
+texture_progress_offset = Vector2(13.5, 0)
+
+[node name="fruit_progress" type="TextureProgressBar" parent="."]
+offset_left = 80.0
+offset_top = 10.0
+offset_right = 144.0
+offset_bottom = 27.0
+texture_under = ExtResource("2_lnfdw")
+texture_progress = ExtResource("3_adv5b")
+texture_progress_offset = Vector2(13.5, 0)
+tint_progress = Color(2.37, 4.14, 0, 1)
+radial_fill_degrees = 338.0
+
+[node name="time_text" type="Label" parent="."]
+offset_left = 545.0
+offset_top = 10.0
+offset_right = 595.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_m6fqh")
+theme_override_font_sizes/font_size = 32
+text = "000"
+horizontal_alignment = 1
+
+[node name="fruit_basket" type="Sprite2D" parent="."]
+position = Vector2(88.0881, 17.5625)
+scale = Vector2(0.428977, 0.428977)
+texture = ExtResource("2_rnohw")
+
+[node name="hour_glass" type="Sprite2D" parent="."]
+position = Vector2(535, 18)
+texture = ExtResource("6_nvbty")
