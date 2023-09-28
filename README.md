@@ -1,5 +1,5 @@
 # GodotGame1
 
-W, D = WALK
-SHIFT = RUN
-SPACE = JUMP
+W, D = WALK<BR>
+SHIFT = RUN<BR>
+SPACE = JUMP<BR>
